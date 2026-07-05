@@ -34,3 +34,25 @@ header{
     text-align:center;
     margin-top:150px;
 }
+
+.action{
+display:flex;
+justify-content:space-between;
+margin:100px;
+}
+
+.left-side h2{
+font-size:42px;
+font-weight:bold;
+}
+
+.left-side p{
+font-size:24px;
+color:#8987a1;
+}
+
+.right-side img{
+width:400px;
+height:328px;
+border-radius:48px;
+}
