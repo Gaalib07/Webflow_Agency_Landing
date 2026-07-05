@@ -1,0 +1,36 @@
+.plus-jakarta-sans-normal{
+    font-family:"Plus Jakarta Sans",sans-serif;
+}
+
+.btn{
+    background:#4E47FF;
+    color:white;
+    border:none;
+    border-radius:10px;
+    width:132px;
+    height:48px;
+}
+
+.btn1{
+    background:#4E47FF;
+    color:white;
+    border:none;
+    border-radius:10px;
+    width:200px;
+}
+
+header{
+    background-image:url(../Assets/Hero-bg.png);
+    height:698px;
+}
+
+.banner-primary{
+    display:flex;
+    justify-content:space-between;
+    padding:30px 80px;
+}
+
+.banner-article{
+    text-align:center;
+    margin-top:150px;
+}
