@@ -1,58 +1,465 @@
-.plus-jakarta-sans-normal{
-    font-family:"Plus Jakarta Sans",sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-.btn{
-    background:#4E47FF;
-    color:white;
-    border:none;
-    border-radius:10px;
-    width:132px;
-    height:48px;
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    color: #1E1E1E;
+    overflow-x: hidden;
 }
 
-.btn1{
-    background:#4E47FF;
-    color:white;
-    border:none;
-    border-radius:10px;
-    width:200px;
+.plus-jakarta-sans-normal {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-header{
-    background-image:url(../Assets/Hero-bg.png);
-    height:698px;
+/* shared styles */
+.btn {
+    background-color: #4E47FF;
+    border-radius: 10px;
+    color: white;
+    min-width: 132px;
+    height: 48px;
+    padding: 12px 24px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.banner-primary{
-    display:flex;
-    justify-content:space-between;
-    padding:30px 80px;
+.btn:hover,
+.btn1:hover,
+.btn2:hover {
+    background-color: #0000cc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 255, 0.199);
 }
 
-.banner-article{
-    text-align:center;
-    margin-top:150px;
+.btn1 {
+    background-color: #4E47FF;
+    border-radius: 10px;
+    color: white;
+    padding: 16px 20px;
+    width: 200px;
+    max-width: 100%;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.action{
-display:flex;
-justify-content:space-between;
-margin:100px;
+.btn2 {
+    background-color: #4E47FF;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.left-side h2{
-font-size:42px;
-font-weight:bold;
+/* header section */
+header {
+    background-image: url(../Assets/Hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 698px;
 }
 
-.left-side p{
-font-size:24px;
-color:#8987a1;
+.banner-primary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.right-side img{
-width:400px;
-height:328px;
-border-radius:48px;
+.logo-text {
+    color: #4E47FF;
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.banner-article {
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.banner-article h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+/* main-action section */
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 100px;
+}
+
+.left-side h2 {
+    font-weight: bold;
+    font-size: 42px;
+    color: #252432;
+}
+
+.left-side p {
+    font-size: 24px;
+    color: #8987a1;
+}
+
+.right-side img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 48px;
+    display: block;
+}
+
+/* main-productive-users */
+.productive-users {
+    margin: 100px;
+    text-align: center;
+    background-color: rgba(255, 228, 196, 0.315);
+    padding: 80px 40px;
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px 100px;
+    margin-top: 40px;
+}
+
+.user-box .stat {
+    color: #4E47FF;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title1 h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #252432;
+    margin: 0;
+}
+
+.pp {
+    color: #0000009d;
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+/* main-users feedback */
+.users-feedback {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.title2 h2 {
+    color: #252432;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto 100px;
+    max-width: 1200px;
+}
+
+.card {
+    border-radius: 14px;
+    width: 366px;
+    max-width: 100%;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    color: #8987a1;
+    margin-bottom: 20px;
+}
+
+.reviewer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+}
+
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.date {
+    color: #8987a1;
+    font-size: 14px;
+}
+
+/* main-get-start */
+.get-start {
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 100px;
+    padding: 70px 40px;
+    border-radius: 24px;
+}
+
+.get-start img {
+    border-radius: 48px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.get-start h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.get-start p {
+    color: #8987a1;
+    margin: 20px 0;
+}
+
+/* main-form section */
+.form {
+    display: flex;
+    gap: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 100px;
+    margin: 100px;
+    flex-wrap: wrap;
+}
+
+.left-section {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.left-section h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.right-section {
+    flex: 1 1 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #4E47FF;
+    outline-offset: 1px;
+}
+
+.btn2 {
+    align-self: flex-start;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.08);
+    padding: 100px 20px;
+}
+
+footer .logo-text {
+    font-size: 60px;
+    color: #4E47FF;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 20px;
+    color: #8987a1;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: #1E1E1E;
+    font-weight: 600;
+}
+
+ul a:hover {
+    color: #4E47FF;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+    .action,
+    .productive-users,
+    .get-start,
+    .form {
+        margin: 60px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-primary {
+        padding: 20px 30px;
+    }
+
+    .banner-article {
+        margin-top: 100px;
+    }
+
+    .banner-article h1 {
+        font-size: 34px;
+    }
+
+    .action,
+    .productive-users,
+    .get-start,
+    .form {
+        margin: 40px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .action {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-side h2 {
+        font-size: 30px;
+    }
+
+    .left-side p {
+        font-size: 18px;
+    }
+
+    .title2 h2,
+    .get-start h2 {
+        font-size: 32px;
+    }
+
+    .card-container {
+        margin: 40px auto 60px;
+    }
+
+    .form {
+        padding: 40px 20px;
+    }
+
+    .left-section {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    footer {
+        padding: 60px 20px;
+    }
+
+    footer .logo-text {
+        font-size: 40px;
+    }
+
+    ul {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn1 {
+        width: 100%;
+    }
+
+    .users {
+        gap: 30px;
+    }
+
+    .user-box .stat {
+        font-size: 36px;
+    }
 }
